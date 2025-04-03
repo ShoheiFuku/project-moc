@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ホテルコンシェルジュ - チャット / Hotel Concierge - Chat</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <div class="header">
+        <button class="back-button" id="backButton">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path fill="white" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
+            </svg>
+        </button>
+        
+        <h1>Hotel Concierge</h1>
+        
+        <div class="language-buttons">
+            <button class="language-button" id="jpButton">日本語</button>
+            <button class="language-button" id="enButton">English</button>
+        </div>
+    </div>
+    
+    <!-- チャットエリア -->
+    <div class="chat-container">
+        <div class="chat-messages" id="chatMessages">
+            <!-- ウェルカムメッセージ -->
+            <div class="message assistant">
+                <div class="message-content">
+                    <p data-lang-ja="こんにちは！ホテルコンシェルジュです。滞在をより快適にするお手伝いをいたします。何かご質問はありますか？" data-lang-en="Hello! I'm your Hotel Concierge. How can I help make your stay more comfortable?">Hello! I'm your Hotel Concierge. How can I help make your stay more comfortable?</p>
+                </div>
+                <div class="message-time">14:00</div>
+            </div>
+            
+            <!-- ユーザーメッセージの例 -->
+            <div class="message user">
+                <div class="message-content">
+                    <p>Hotel facilities information</p>
+                </div>
+                <div class="message-time">14:01</div>
+            </div>
+            
+            <!-- アシスタントメッセージの例 -->
+            <div class="message assistant">
+                <div class="message-content">
+                    <p data-lang-ja="当ホテルには以下の施設がございます：24時間フィットネスセンター（2階）、屋上プール（10階）、スパ（3階）、ビジネスセンター（ロビー階）。ご利用時間やその他の詳細についてお知りになりたい施設はありますか？" data-lang-en="Our hotel offers the following facilities: 24-hour fitness center (2nd floor), rooftop pool (10th floor), spa (3rd floor), and business center (lobby level). Would you like to know more about opening hours or any specific facility?">Our hotel offers the following facilities: 24-hour fitness center (2nd floor), rooftop pool (10th floor), spa (3rd floor), and business center (lobby level). Would you like to know more about opening hours or any specific facility?</p>
+                </div>
+                <div class="message-time">14:01</div>
+            </div>
+        </div>
+        
+        <!-- 入力エリア -->
+        <div class="input-container">
+            <input type="text" class="message-input" placeholder="Type a message..." id="messageInput">
+            <button class="send-button" id="sendButton">
+                <svg class="send-icon" viewBox="0 0 24 24">
+                    <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    
+    <!-- 機能ツールバー -->
+    <div class="function-toolbar">
+        <button class="tool-button" data-tool="home" id="homeButton">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path>
+            </svg>
+            <span class="tool-label" data-lang-ja="ホーム" data-lang-en="Home">Home</span>
+        </button>
+    </div>
+    
+    <!-- JavaScriptの参照修正 -->
+    <script src="js/chat.js"></script>
+</body>
+</html>
